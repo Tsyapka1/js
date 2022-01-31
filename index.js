@@ -39,24 +39,60 @@
    
 // }
 
-let x = prompt('Введите первое число', );
-let y = prompt('Введите второе число', );
-let z = prompt('Введите 1 чтобы сработал знак +, введите 2 чтобы -, 3 чтобы * и 4 для/' );
+// let x = prompt('Введите первое число', );
+// let y = prompt('Введите второе число', );
+// let z = prompt('Введите 1 чтобы сработал знак +, введите 2 чтобы -, 3 чтобы * и 4 для/' );
 
 
-let result;
+// let result;
 
-switch(z){
-        case '1':result = x + y;
-    break;
-        case '2':result = x - y;
-    break;
-        case '3':result = x * y;
-    break;
-        case '4':result = x / y;
-    break;
-    default: result = 'Not have comand.';
-}
-alert(result);
+// switch(z){
+//         case '1':result = x + y;
+//     break;
+//         case '2':result = x - y;
+//     break;
+//         case '3':result = x * y;
+//     break;
+//         case '4':result = x / y;
+//     break;
+//     default: result = 'Not have comand.';
+// }
+// alert(result);
 
+
+
+
+
+
+
+
+
+
+
+
+// for( let counter = 25;counter >= 0;counter--) {
+//     console.log(counter);
+// }
+
+
+// let i = 25;
+// do {
+//   console.log( i );
+//   i--;
+// } while (i > 0);
+
+// let i = 10;
+
+// while (i < 50) {
+//     i++;
+
+//     if(i % 5) {
+//         continue
+//     }
+//     console.log(i);
+// };
+// for(let conter = 10; conter <= 50; conter++) {
+//     console.log(conter);
+
+// };
 

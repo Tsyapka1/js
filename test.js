@@ -7,7 +7,7 @@
 
 // return --- работает в функции только Один раз.!!
 
-
+// confirm --- Tru or false Еще одно выпадающее окно. Которое имеет только два значение(booling)
 
 
 
@@ -186,3 +186,54 @@ if(true) {
              alert(Error);
          };
  };
+
+
+
+//  Циклы императивные (жёсткие) , начинаются всегда с * 0 *....==>>
+
+let isRunning = true;
+
+while (isRunning) {
+    alert(1);                       // <<------ Так правильно!  Перый вариант!
+    if(isRunning) {
+        isRunning = false;
+        break;
+    }
+}
+
+let conter = 0;
+
+while (conter < 10) {
+    conter++;
+
+    if(counert % 2 === 0) {
+        continue
+    }
+    console.log(conter);
+}
+
+//  Младший брат цикла вайл
+do {
+    conter++;
+
+    if (counter % 2 === 0) {       
+        continue
+    }
+
+    console.log(conter);
+
+} while (couter <= 10);
+
+
+//  Ещё один цикл
+
+for( let counter = 0;counter <= 10;counter++) {
+     console.log(counter);
+}
+
+let num1 = 0;
+
+do {
+    console.log(num1);
+    num1--
+} while (num > 25)
