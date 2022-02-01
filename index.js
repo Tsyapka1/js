@@ -115,4 +115,18 @@
 // }
 
 
-
+function Car(manufacturer, model, releaseYear, color, fuelconsumption, volume) {
+    // debugger;
+    this.drive = function () {
+        return 'Bru, brum!';
+    };
+     this.manufacturer = manufacturer;
+     this.model = model;
+     this.releaseYear = releaseYear;
+     this.color = color;
+     this.fuelconsumption = fuelconsumption;
+     this.volume = volume;
+     
+}
+   
+const car1 = new Car('Mersede', 'Sprinter', '2001', 'black', '12', '100')
