@@ -34,7 +34,7 @@ num = num + 1;
 numb += 5;
 console.log(num);
 
-let num1 =10;
+let num1 = 10;
 let num2 = 10;
 
 console.log(num1 === num2);
@@ -237,3 +237,39 @@ do {
     console.log(num1);
     num1--
 } while (num > 25)
+
+
+//ОООбьекты   Имя обьекта нельзя изменить но можно перезаписать его свойство.
+
+
+const teacher = {
+    firstName : 'Kiril' ,
+    lastName : 'Sekret' ,
+
+    sayHello: function() {
+        alert('Hello');
+    }
+}
+
+
+
+function Cat (name, breed, age, isMale) {
+    debugger;
+    // const newCat = {
+    //     meow: function () {
+    //         return 'Meow';
+    //     }
+    // };
+
+    this.meow = function() {
+        return 'Meow';
+    }
+    this.name = name;
+    this.breed = breed;
+    this.age = age;
+    this.isMale = isMale;
+
+    return this;
+};
+
+const cat4 = new Cat('Barsick', 'siam', 3.2, true);

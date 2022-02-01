@@ -23,26 +23,21 @@
 //     }
 // }
 
-
-
-
-
 // const colorType = prompt('Color?')
 // if(colorType === 'red') {
 //     alert('stop');
-// } 
+// }
 // else if(colorType === 'yellow'){
 //     alert('Wayt');
-// } 
+// }
 // else if(colorType === 'green') {
 //     alert('Go');
-   
+
 // }
 
 // let x = prompt('Введите первое число', );
 // let y = prompt('Введите второе число', );
 // let z = prompt('Введите 1 чтобы сработал знак +, введите 2 чтобы -, 3 чтобы * и 4 для/' );
-
 
 // let result;
 
@@ -59,21 +54,9 @@
 // }
 // alert(result);
 
-
-
-
-
-
-
-
-
-
-
-
 // for( let counter = 25;counter >= 0;counter--) {
 //     console.log(counter);
 // }
-
 
 // let i = 25;
 // do {
@@ -94,5 +77,42 @@
 // for(let conter = 10; conter <= 50; conter++) {
 //     console.log(conter);
 
+// const student = {
+//   firstName: "Dima",
+//   lastName: "Tsyaka",
+//   age: "25",
+//   weight: "120",
 // };
+
+// const myWife = {
+//   firstName: "Masha",
+//   lastName: "Tsyaka",
+//   age: "33",
+//   weight: "60",
+//   addres: {
+//     country: "UA",
+//     city: "ZP",
+//     street: "Suhoivanovskaya",
+//   },
+// };
+
+// const myFriends = {
+//   firstName: "Ilja",
+//   lastName: "Sadohin",
+//   age: "26",
+//   weight: "80",
+//   sayHi: function () {
+//     alert("FcOf");
+//   },
+// };
+
+// function greet(person) {
+//     if(typeof person.firstName === 'string' && person.firstName !== '' && typeof person.lastName === 'string' && person.lastName !== '' ) {
+
+//         return "hello " + person.firstName + " " + person.lastName;
+//     }
+//     return 'Неверные данные, нужен пользователь'
+// }
+
+
 
