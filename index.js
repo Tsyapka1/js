@@ -114,19 +114,41 @@
 //     return 'Неверные данные, нужен пользователь'
 // }
 
+'use stict';
 
-function Car(manufacturer, model, releaseYear, color, fuelconsumption, volume) {
-    // debugger;
-    this.drive = function () {
-        return 'Bru, brum!';
-    };
-     this.manufacturer = manufacturer;
-     this.model = model;
-     this.releaseYear = releaseYear;
-     this.color = color;
-     this.fuelconsumption = fuelconsumption;
-     this.volume = volume;
+// function Car(manufacturer, model, releaseYear, color, fuelconsumption, volume) {
+//     // debugger;
+//     this.drive = function () {
+//         return 'Bru, brum!';
+//     };
+
+//     this.getDriveDistance = function () {
+//         return this.volume * this.uelconsumption;
+//     };
+//      this.manufacturer = manufacturer;
+//      this.model = model;
+//      this.releaseYear = releaseYear;
+//      this.color = color;
+//      this.fuelconsumption = fuelconsumption;
+//      this.volume = volume;
      
-}
+// }
    
-const car1 = new Car('Mersede', 'Sprinter', '2001', 'black', '12', '100')
+// const car1 = new Car('Mersede', 'Sprinter', '2001', 'black', '12', '100')
+
+
+// let num1 = 2;
+// let num2 = 2;
+// let num3 = 2;
+
+// alert(`${num1}+${num2}*${num3}=${num1+num2*num3}`)
+
+function createTable () {
+    const table = {}
+    for(let i = 1; i<=10; i++) {
+        for(let j = 1; j<=10; j++){
+
+            table[`${i} * ${j} = `j = i * j
+        }
+    }
+}
