@@ -273,3 +273,24 @@ function Cat (name, breed, age, isMale) {
 };
 
 const cat4 = new Cat('Barsick', 'siam', 3.2, true);
+
+
+
+
+
+
+// Таблица умножения Обьектом
+const table = {};
+let left = 1;
+let right = 1;
+for(let i = 1; i <= 90; i++) {
+    if(right !== 9) {
+        table[`${left} * ${right} = `] = left * right;
+        right++;
+    }
+    else if(right === 9){
+        table[`${left} * ${right} = `] = left * right;
+        left += 1;
+        right = 1;
+    }
+}
