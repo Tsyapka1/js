@@ -145,10 +145,17 @@
 
 function createTable () {
     const table = {}
-    for(let i = 1; i<=10; i++) {
+    for(let i = 1; i<=9; i++) {
         for(let j = 1; j<=10; j++){
 
-            table[`${i} * ${j} = `j = i * j
+            table[`${i} * ${j} = `] = i * j;
         }
     }
-}
+    return table
+};
+// const createTable = createTableOne();
+
+
+const newArray = ['Anubis', 'Ra', 'Faraon', 'Wuwu', 'Rere' ]
+const deleted1 = newArray.splice(3,2, 'Oleg', 'Irina');
+const deleted2 = newArray.slice(2,4);
