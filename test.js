@@ -457,3 +457,33 @@ for(let i = 1; i <= 90; i++) {
     // const newArray = ['Anubis', 'Ra', 'Faraon', 'Wuwu', 'Rere' ]
     // const deleted1 = newArray.splice(3,2, 'Oleg', 'Irina');
     // const deleted2 = newArray.slice(2,4);
+
+
+
+
+
+    // forEach
+    const arr = [5,10,47 ,true, null, 'test'];
+
+    /*Так не делать */
+    // for(let i = 0; i < arr.length; i++) {
+    //     console.log(arr[i]);
+    // }
+
+    arr.forEach(callback);
+
+    function callback(value, i, array) {
+
+        console.log(`${value} с индексом ${i}`);
+    };
+
+    // MAP
+
+   const neArr = arr.map(callback);
+
+    function callback(value, i, array) {
+
+        console.log(`${value} с индексом ${i}`);
+        const obj = {value: 'test' , name: value.name}
+        return obj
+    };

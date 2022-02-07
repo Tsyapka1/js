@@ -1,3 +1,5 @@
+'use strict';
+
 // Первая задачаю
 
 const arrOne = [1,2,3];
