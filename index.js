@@ -1,50 +1,42 @@
 'use strict';
 
-// Первая задачаю
+function Car(manufacturer, model, releaseYear, color, fuelconsumption, volume, speed, maxspeed) {
+   // debugger;
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.releaseYear = releaseYear;
+        this.color = color;
+        this.fuelconsumption = fuelconsumption;
+        this.volume = volume;
+       this.speed = speed;
+       this.maxspeed = maxspeed;
+   };
 
-const arrOne = [1,2,3];
-const arrOneOne = [4,5,6];
-const arrOneFinish = arrOne.concat(arrOneOne);
+function CarPrototype() {
+  this.drive = function() {
+    if(this.speed < this.maxspeed) {
+      this.speed = this.speed + 10
+      return this.speed;
+    }else {
+      return this.speed;
+    };
+  }
+  this.breaking = function () {
+    if(this.speed < this.maxspeed) {
+      this.speed = this.speed - 10;
+      return this.speed
+  }else{ 
+    return this.speed;
+  }
+}
+  this.stop = function() {
+    return 0
+  }
+};
 
-// Вторая задача
-const arrSecond = [1,2,3];
-const arrSecondFinish = arrSecond.reverse();
+const carPrototype = new CarPrototype();
+Car.prototype = carPrototype;
 
-// Третяя задача
-const arrThird = [1,2,3];
-const arrThirdOne = arrThird.push(4,5,6);
-const arrThirdTwo = arrThird.unshift(4,5,6);
-
-// Четвёртая задача
-const arrFour = ['js', 'css', 'jq'];
-const arrDelletFour = arrFour.shift()
-const arrFourDellet = arrFour.pop();
-
-// Пятая задача
-const arrFive = [1,2,3,4,5];
-const arrFiveOne = arrFive.slice(1,3);
-const arrFiveTwo = arrFive.slice(4,5);
-
-// Шестая задача
-const arrSixt = [1, 2, 3, 4, 5];
-const arrSixtSpliceOne = arrSixt.splice(1,5, 1,4,5);
-const arrSixtSpliceTwo = arrSixt.splice(1,0, 2,3,4);
-const arrSixtSpliceThird = arrSixt.splice(3,0, 'a','b','c');
-const arrSixtSpliceFour = arrSixt.splice(1,0, 'a','b');
-
-// Седьмая задача
-const arrSeven = [3, 4, 1, 2, 7];
-function arrSevenSort(a, b) {
-    if (a > b) return 1;
-    if (a == b) return 0;
-    if (a < b) return -1;
-  };
-  arrSeven.sort(arrSevenSort);
+     
+   const car1 = new Car('Mersede', 'Sprinter', 2001, 'black', 12, 100, 0, 160)
   
-// Восьмая задача
-
-// Девятая задача
-
-// Десятая задача
-
-// Одинадцатая задача

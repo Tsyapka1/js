@@ -487,3 +487,45 @@ for(let i = 1; i <= 90; i++) {
         const obj = {value: 'test' , name: value.name}
         return obj
     };
+
+
+
+    // Prototype
+
+    const prototype = {
+        greet: function() {
+            return `hello ${this.name}  ${this.lastname}`;
+        }
+    };
+
+    const obj = {
+        name: "Test",
+        lastName: "Testovich",
+        __proto__: prototype,
+    };
+
+
+
+
+// Функция конструктор
+
+    
+    function Phone(model, price) {
+        this.model = model;
+        this.price = price;
+    }
+    
+    function PhonePrototype() {     // Это прототип (функция конструктор)
+        this.call = function() {
+            return 'Call';
+        }
+        this.endCall = function() {
+            return 'End Call';
+        }
+    };
+    // const phonePrototype = new PhonePrototype();
+
+    Phone.prototype = new PhonePrototype();
+
+    const phone1 = new Phone('Ipone', 99);
+    const phone2 = new Phone('Sony', 12);
