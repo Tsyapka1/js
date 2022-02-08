@@ -2,6 +2,12 @@
 
 function Car(manufacturer, model, releaseYear, color, fuelconsumption, volume, speed, maxspeed) {
    // debugger;
+   if(typeof manufacturer !== 'string' || typeof model !== 'string' || typeof color !== 'string') {
+     throw new TypeError('Need string');
+   }
+   if(typeof releaseYear !== 'number' || typeof fuelconsumption !== 'number' || typeof volume !== 'number' || typeof speed !== 'number' || typeof maxspeed !== 'number') {
+     throw new TypeError('Need number')
+   }
         this.manufacturer = manufacturer;
         this.model = model;
         this.releaseYear = releaseYear;
@@ -13,6 +19,7 @@ function Car(manufacturer, model, releaseYear, color, fuelconsumption, volume, s
    };
 
 function CarPrototype() {
+
   this.drive = function() {
     if(this.speed < this.maxspeed) {
       this.speed = this.speed + 10
