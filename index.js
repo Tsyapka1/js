@@ -22,9 +22,9 @@ function CarPrototype() {
     };
   }
   this.breaking = function () {
-    if(this.speed < this.maxspeed) {
-      this.speed = this.speed - 10;
-      return this.speed
+    if(this.speed <= this.maxspeed) {
+      this.maxspeed = this.maxspeed - 10;
+      return this.maxspeed
   }else{ 
     return this.speed;
   }
