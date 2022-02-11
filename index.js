@@ -36,6 +36,13 @@ if(arr.includes(leter.toLowerCase())) {
 };
   };
   return result;
-};
+ };
 
-jvuohjk
+
+
+ 
+// Rest Operator >>>
+const summ = (...numbers)=> numbers.reduce((summ, number)=>+summ + +number);
+
+
+//Spread syntax
