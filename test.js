@@ -588,4 +588,20 @@ function Car(manufacturer, model, releaseYear, color, fuelconsumption, volume, s
  
       
     const car1 = new Car('Mersede', 'Sprinter', 2001, 'black', 12, 100, 0, 160)
-   
+    
+
+    //MyArray
+
+    function MyArray() {
+        this.lenght = 0;
+    };
+
+    function MyArrayProto() {
+        this.push = function (...values) {
+            for(let i = 0; i < values.length; i++) {
+                this[this.length++] = values[i];
+            }
+            return this.legth;
+        };
+
+    };
