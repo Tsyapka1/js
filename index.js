@@ -1,37 +1,45 @@
 'use strict';
 
 
-// Наследование классов записуется именно так
-class Moder extends User {      
-    constructor(email) {
-       super(name, surname, age)
-        this.emeil = email;
-    };
-   
+class Animal {
+  constructor(type, nickname) {
+    this.type = type;
+    this.nickname = nickname;
+  }
 
-  get email() {
-    return this._emeil;
-  };
-  set email(newEmail) {
-    if (typeof newEmail !== 'string') {
-      throw new TypeError('email must be string');
-    }
-    if (newEmail > 150 || newAge < 0 || isNaN(newEmail)) {
-      throw new RangeError('Age must be normal');
-    }
-
-    this._email = newEmail;
-  };
- 
- 
+  speak() {
+    return `Животное ${this.nickname} издает звуки`;
+  }
 }
 
-    
+class Snake extends Animal {
+  constructor(nickname) {
+    super('Змея', nickname);
+  }
 
-getFullName = () => `${this.name} ${this.surname}`;
+  speak() {
+    return `${this.type} ${this.nickname} шипит`;
+  }
+}
 
-isAdult = () => this.age >= 18;
+class Cat extends Animal {
+  constructor(nickname) {
+    super('Кот', nickname);
+  }
 
-  const user = new User('Ivan', 'Ivanov', 42);
-  const user1 = new User('Ivan', 'Ivanov', 12);
-  const user2 = new User('Test', 'Testovich', -500);
+  speak() {
+    return `${this.type} ${this.nickname} мяукает`;
+  }
+}
+
+class Trainer {
+  trainSpeech(animal) {
+    return animal.speak();
+  }
+}
+
+const animal = new Animal('животное', 'Пушок');
+const snake = new Snake('Ефрасинья Петровна');
+const cat = new Cat('Симба');
+
+const trainer = new Trainer();
