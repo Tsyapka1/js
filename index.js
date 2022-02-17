@@ -40,6 +40,5 @@ class Trainer {
 
 const animal = new Animal('животное', 'Пушок');
 const snake = new Snake('Ефрасинья Петровна');
-const cat = new Cat('Симба');
-
 const trainer = new Trainer();
+dwcsadec
