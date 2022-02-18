@@ -1,44 +1,36 @@
 'use strict';
 
 
-class Animal {
-  constructor(type, nickname) {
-    this.type = type;
-    this.nickname = nickname;
-  }
 
-  speak() {
-    return `Животное ${this.nickname} издает звуки`;
-  }
-}
+function isFirsElementOfArray (arr, element) {
+  return arr[0] === element;
+};
 
-class Snake extends Animal {
-  constructor(nickname) {
-    super('Змея', nickname);
-  }
+const arr = [0,2,3,4];
+const arr2 = Array(500000).fill(null).map((_,index) => index + 1)
+const number1 = 8;
+const number2 = 0;
 
-  speak() {
-    return `${this.type} ${this.nickname} шипит`;
-  }
-}
 
-class Cat extends Animal {
-  constructor(nickname) {
-    super('Кот', nickname);
-  }
+console.time('0(1) big array');
+const result1 = isFirsElementOfArray(arr, number1);
+console.timeEnd('0(1)');
 
-  speak() {
-    return `${this.type} ${this.nickname} мяукает`;
-  }
-}
+console.time('0(1)')
+const result2 = isFirsElementOfArray(arr, number2);
+console.timeEnd('0(1) big array');
 
-class Trainer {
-  trainSpeech(animal) {
-    return animal.speak();
-  }
-}
+//0 (n)
 
-const animal = new Animal('животное', 'Пушок');
-const snake = new Snake('Ефрасинья Петровна');
-const trainer = new Trainer();
-dwcsadec
+function isElementInArray (arr, elem) {
+  for(let i = 0; i<arr.lenght; i++) {
+    if(elem === arr[i]) {
+      return true;
+    }
+  }
+  return false;
+};
+
+console.time('O(n) best case')
+const oNworst = isElementInArray(arr2, 49999);
+console.timeEnd('O(n) best case')

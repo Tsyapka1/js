@@ -12,8 +12,7 @@
 
 
 
-//masmasksa
-
+//
 
 
 
@@ -605,3 +604,15 @@ function Car(manufacturer, model, releaseYear, color, fuelconsumption, volume, s
         };
 
     };
+
+
+    function isFirsElementOfArray (arr, element) {
+        return arr[0] === element;
+    };
+
+    const arr = [0,2,3,4];
+    const number1 = 8;
+    const number2 = 0;
+
+    const result1 = isFirsElementOfArray(arr, number1);
+    const result2 = isFirsElementOfArray(arr, number2);
