@@ -616,3 +616,23 @@ function Car(manufacturer, model, releaseYear, color, fuelconsumption, volume, s
 
     const result1 = isFirsElementOfArray(arr, number1);
     const result2 = isFirsElementOfArray(arr, number2);
+
+
+
+    // Сохраняет уникальные данные массивов
+
+    
+const number1 = [1,2,3,4,4,5];
+const number2 = ['Igor', 'Slavik', 'Masha', 2, 4]
+
+const set = new Set([...number1, ...number2]); 
+
+// for(let i = 0; i < number1; i++) {
+//   set.add(number1[i]);
+// };
+
+// set.forEach((element) => {
+//   set.add(element)
+// });
+
+const resultArr = [...set];
