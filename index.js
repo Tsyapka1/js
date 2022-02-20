@@ -1,16 +1,32 @@
 'use strict';
 
-const number1 = [1,2,3,4,4,5];
-const number2 = ['Igor', 'Slavik', 'Masha', 2, 4]
+class Cat {
+    constructor(breed, nickname, mouse) {
+        this.breed = breed,
+        this.nickname = nickname,
+        this.mouse = mouse
+    }
+    meew() {
+        return `meew`;
+    }
+    eat() {
+        return `${this.breed} eating`;
+    }
+    sleep() {
+        return `${this.breed} sleeping`;
+    }
+    catchingMice () {
+        for(let i = 0; i < this.mouse; i++) {
+              set.add(this.mouse[i]);
+        }
+    }
+};
 
-const set = new Set([...number1, ...number2]); 
+class StrayCat extends Cat {
+    constructor(breed, nickname, mouse, eatMous){
+        super(breed, nickname, mouse)
+        this.eatMous = eatMous
+    }
+    
 
-// for(let i = 0; i < number1; i++) {
-//   set.add(number1[i]);
-// };
-
-// set.forEach((element) => {
-//   set.add(element)
-// });
-
-const resultArr = [...set];
+    };
