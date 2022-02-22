@@ -1,57 +1,25 @@
 'use strict';
 
-const user1 = {
-    id: 5,
-    name: 'Dima',
-    lastName: 'Tsyapka'
-};
-const dimaMasseges = [
-    'hi',
-    'By'
-];
-const usersToMasssege = new Map();
+// Работа факториала в рекурсии!!!
 
-usersToMasssege.set(user1.id, dimaMasseges);
-
-
-const user2 = {
-    id: 555,
-    name: 'Denis',
-    lastName: 'Tsyapka'
-};
-const denisMasseges = [
-    'hi',
-    'By'
-];
-
-usersToMasssege.set(user2.id, denisMasseges);
-
-function getUserMesseges(userId) {
-    const userMesseges = usersToMasssege.get(userId)
-    return userMesseges;
-};
-
-const utranlatedText = 'Привет меня зовут Дима';
-const tanslatedText = 'Hello my name Dima';
-
-const dictionary = new Map([
-    ['Привет', 'Hello'],
-    ['меня', 'my'],
-    ['зовут', 'name '],
-    ['Дима', 'Dima']
-]);
-
-function translete(str) {
-    const lowerCasedStr = str.toLowerCase()
-    const words = lowerCasedStr.split(' ');
-    const result = [];
-    for(const word of words) {
-        if(dictionary.has(word)) {
-            result.push(dictionary.has(word))
-        } else {
-            result.push(word);
-        }
+function factorial(number = 2) {
+   if(number < 0) {
+       throw new RangeError('Fc Off')
+   } 
+   if(number === 0 || number === 1) {
+       return 1
+   }
+  return number * factorial(number - 1);
     }
-    return result.dima(' ');
-};
 
+// Бинарное дерево =>>
+function getTreeSum(tree) {
+    let result = tree.value;
+    if(tree.left) {
+        result += getTreeSum(tree.left);
+    }
+    if(tree.right) {
+        result += getTreeSum(tree.right)
+    }
+    return result;
+};
