@@ -716,3 +716,64 @@ function getTreeSum(tree) {
     }
     return result;
 };
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>
+/*
+  при загрузке страницы пользователя спросить язык
+  когда пользователь выберет язык показать ему приветствие
+  на его языке алертом
+  *если язык не поддерживается то естьльзовать английское приветствие
+  строка с приветсвием хранится в отдельном Мапе
+*/
+const userLanguage = prompt(`Select language:
+en - English
+ua - Ukrainian`);
+
+const greetings = new Map([
+  [
+    'en',
+    {
+      greetingText: 'Hello',
+      pageTitle: 'Main Page',
+    },
+  ],
+]);
+
+greetings.set('ua', { greetingText: 'Вітаю', pageTitle: 'Головна сторінка' });
+
+if (greetings.has(userLanguage)) {
+  const translation = greetings.get(userLanguage);
+  alert(translation.greetingText);
+} else {
+  const translation = greetings.get('en');
+  alert(translation.greetingText);
+}
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// >>>>>>>>>Try Catch Finely>>>>>
+try {
+    console.log(1);
+    console.log(abc);
+    console.log(2);
+}
+catch (err) {
+    console.log('error');
+} finally {
+    console.log('end');
+};
+
+// >>>>>>>>>>>>>Методы масивов>>>>>
+// Самые часто использ.
+Array.isArray(arr);
+
+arr.forEach();
+
+arr.map();
+
+arr.concat();
+
+arr.filter();
+
+arr.reduce(); 
